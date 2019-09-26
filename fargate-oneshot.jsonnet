@@ -1,3 +1,6 @@
+local fileProvider = std.native('provide.file');
+local provide(name) = fileProvider(std.toString({ path: '.env' }), name);
+
 {
   scheduler: {
     type: 'ecs',
@@ -24,7 +27,7 @@
     memory: 256,
     memory_reservation: 128,
     env: {
-      SLACK_WEBHOOK: 'https://hooks.slack.com/services/XXXXXXXXX/YYYYYYYYY/ZZZZZZZZZZZZZZZZZZZZZZZZ',
+      SLACK_WEBHOOK: provide('slack_webhook'),
       SLACK_MESSAGE: 'hello!',
     },
     log_configuration: {
