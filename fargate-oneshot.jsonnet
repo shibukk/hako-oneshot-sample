@@ -39,4 +39,7 @@ local provide(name) = fileProvider(std.toString({ path: '.env' }), name);
       },
     },
   },
+  scripts: [
+    (import './create_aws_cloud_watch_logs_log_group.libsonnet'),
+  ],
 }
