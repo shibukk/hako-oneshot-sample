@@ -1,15 +1,11 @@
 # hako-oneshot-sample
 
-## Installation
-
-Execute this command:
-
-```bash
-$ bundle install --path vendor/bundle
-```
-
 ## Usage
 
+1. Install hako.
+    ```
+    $ bundle install --path vendor/bundle
+    ```
 1. Create ECS cluster on AWS Console.  
 Then please choose `[Networking only]`.
 1. [Create IAM Role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html) if needed.
