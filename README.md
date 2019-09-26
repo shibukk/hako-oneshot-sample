@@ -1,0 +1,1 @@
+# hako-oneshot-sample
